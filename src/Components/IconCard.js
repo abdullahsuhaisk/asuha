@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function MyResumeCard({ section, setSelectedresume, selectedResume, resumeCardArray }) {
+function IconCard({ section, setSelectedresume, selectedResume, resumeCardArray }) {
     const classes = useStyles();
 
     return (
@@ -53,4 +53,4 @@ function MyResumeCard({ section, setSelectedresume, selectedResume, resumeCardAr
         </Box>
     )
 }
-export default MyResumeCard;
+export default IconCard;

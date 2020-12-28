@@ -1,12 +1,20 @@
 import Welcome from "../Components/Welcome";
 import MyResumeContainer from '../Components/Resume/MyResumeContainer'
+import MySkillsContainer from "../Components/MySkillsContainer";
+import LetDiscuss from "../Components/LetDiscuss";
+import HomeBlogContainer from '../Components/Blog/HomeBlogContainer';
+import HomeContactMeContainer from "../Components/ContactMe/HomeContactMeContainer";
 
 function Home() {
   return (
     <>
       <Welcome />
       <MyResumeContainer />
-      <div style={{ width: '100%', backgroundColor: 'red', height: "100vh" }}>
+      <MySkillsContainer />
+      <LetDiscuss />
+      <HomeBlogContainer />
+      <HomeContactMeContainer />
+      <div style={{ width: '100%', backgroundColor: 'pink', height: "100vh" }}>
       </div>
     </>
   )

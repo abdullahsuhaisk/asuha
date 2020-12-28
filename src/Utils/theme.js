@@ -42,3 +42,22 @@ const theme = createMuiTheme({
 });
 
 export default theme;
+
+export const themeCONSTANT = {
+    primary: {
+        light: '#ff8457',
+        main: '#d8532b',
+        dark: '#a02000',
+        contrastText: '#fff',
+    },
+    secondary: {
+        light: '#737186',
+        main: '#474659',
+        dark: '#1f1f30',
+        contrastText: '#000',
+    }, background: {
+        main: '#fff'
+    }, text: {
+        primary: '#474659'
+    }
+};

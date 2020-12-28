@@ -6,8 +6,8 @@ const TopBarButton = (props) => {
 	return (
 		<Box>
 			<Button {...props}>
-				<Typography variant="subtitle1" >
-					<Box fontWeight={700}>
+				<Typography variant={props.fontType ? props.fontType: "subtitle1"}  >
+					<Box fontWeight={ props.fontWeight ? props.fontWeight : 700} color={props.titleColor ? props.titleColor : "primary" }>
 						{props.name}
 					</Box>
 				</Typography>
