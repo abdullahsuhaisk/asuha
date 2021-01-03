@@ -1,11 +1,15 @@
-import { Box, Grid, makeStyles } from "@material-ui/core";
+import { Box, Button, Grid, makeStyles, Typography } from "@material-ui/core";
+import CalendarTodaySharpIcon from '@material-ui/icons/CalendarTodaySharp';
+import QuestionAnswerSharpIcon from '@material-ui/icons/QuestionAnswerSharp';
+
 import BlogImage from '../../Assets/blog-1.jpg'
+import TopBarButton from "../TopBarButton";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: "350px",
+        minWidth: "350px",
         height: "450px",
-        margin:"10px"
+        margin: "10px"
     },
     image: {
         width: "100%",
@@ -17,7 +21,18 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: "10px"
     },
     blogContent: {
-
+        padding: "3px 5px 3px 5px"
+    },
+    blogHeader: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        fontSize: "15px",
+        textTransform: "capitalize",
+        color: "#48455a"
+    },
+    paddingClass: {
+        padding: "0px 10px 5px 10px"
     }
 }));
 function BlogCard() {
@@ -25,22 +40,30 @@ function BlogCard() {
     return (
         <Box className={classes.root} component="section">
             <img src={BlogImage} className={classes.image}></img>
-            <Box component="div" className="blogContent">
+            <Box component="div" className={classes.blogContent}>
                 <Grid container justify="space-between">
+                    <Box component="div" className={classes.blogHeader}>
+                        <CalendarTodaySharpIcon color="primary"/> Date
+                    </Box>
                     <Grid item>
-                        Date
-                    </Grid>
-                    <Grid item>
-                        Comment
+                        <Box component="div" className={classes.blogHeader}>
+                            <QuestionAnswerSharpIcon color="primary" /> Comment Count
+                        </Box>
                     </Grid>
                 </Grid>
-                Business contents insurance iure ipsam ratione is a type of business...
+                <Typography variant="h6" color="textPrimary">
+                    <Box>
+                        Business contents insurance iure ipsam ratione is a type of business...
+                    </Box>
+                </Typography>
                 <Grid container justify="space-between">
                     <Grid item>
-                        Date
+                        <Button variant="contained">
+                            Read
+                        </Button>
                     </Grid>
                     <Grid item>
-                        Comment
+                        <TopBarButton name="Read"/>
                     </Grid>
                 </Grid>
             </Box>

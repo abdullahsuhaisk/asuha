@@ -14,8 +14,6 @@ function Home() {
       <LetDiscuss />
       <HomeBlogContainer />
       <HomeContactMeContainer />
-      <div style={{ width: '100%', backgroundColor: 'pink', height: "100vh" }}>
-      </div>
     </>
   )
 }

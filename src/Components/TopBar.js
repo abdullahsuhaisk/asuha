@@ -3,28 +3,23 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Container from '@material-ui/core/Container';
-import CodeIcon from '@material-ui/icons/DeveloperMode';
-import { Box, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import TopBarButton from './TopBarButton'
-import theme from '../Utils/theme';
+import MyLogo from './MyLogo'
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    '& a': {
+      textDecoration: 'none'
+    }
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
-  },
-  myLogo: {
-    width: "150px",
-    height: '60px',
-    backgroundColor: theme.palette.primary.light,
-    border: "1px solid ",
-    borderRadius: 5,
-    color: 'white'
   }
 }));
 
@@ -37,12 +32,14 @@ export default function TopBar() {
           <Container>
             <Grid container justify={'space-around'} alignContent='center' alignItems="center" direction="row">
               <Grid item>
-                <Mylogo />
+                <MyLogo />
               </Grid>
               <Grid item>
                 <Grid container>
+                  <Link to="/Resume">
+                    <TopBarButton name={"Resume"} />
+                  </Link>
                   <TopBarButton name={"Home"} />
-                  <TopBarButton name={"Resume"} />
                   <TopBarButton name={"Blogs"} />
                   <TopBarButton name={"Projects"} />
                   <TopBarButton name={"Contact"} />
@@ -55,17 +52,4 @@ export default function TopBar() {
       </AppBar>
     </div>
   );
-}
-
-const Mylogo = () => {
-  const classes = useStyles();
-  return (
-    <Box className={classes.myLogo} borderColor="">
-        <Box borderRadius={5} alignContent="center" textAlign="center" display="flex" justifyContent="center" alignItems="center" height="100%">
-          <CodeIcon />
-          <Box fontWeight="700" color="white" fontSize="10px">
-            Abdullah Süha Işık
-          </Box>
-        </Box>
-    </Box>)
 }

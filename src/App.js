@@ -10,18 +10,20 @@ import {
   Link,
   useRouteMatch
 } from "react-router-dom";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
     <>
-      <AppBar />
       <Router>
+      <AppBar />
         <Switch>
           <Route path="/" component={Home} exact />
           <Route path="/About/" component={About} exact />
           <Route path="/edu/" component={Education} exact />
         </Switch>
       </Router>
+      <Footer />
     </>
 
   );

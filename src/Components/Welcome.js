@@ -4,13 +4,9 @@ import Background from '../Assets/banner-bg.png'
 import Image1 from '../Assets/image1.png'
 import circleShape from '../Assets/circle-shape.png'
 import startShape from '../Assets/star-shape.png'
-import TwitterIcon from '@material-ui/icons/Twitter';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import MediumIcon from '@material-ui/icons/MenuBook';
 import theme from "../Utils/theme";
 import TopBarButton from './TopBarButton'
+import SocialMediaIconsComponent from "./SocialMediIconComponents";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -61,34 +57,6 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const socialMediaArray = [
-    {
-        name: 'Linkedin',
-        link: 'https://www.linkedin.com/in/abdullah-s%C3%BCha-i%C5%9F%C4%B1k-92b251101/',
-        component: () => (<LinkedInIcon fontSize="large" style={{ color: "white" }} />)
-    },
-    {
-        name: 'Medium',
-        link: 'https://abdullahsuhaisik.medium.com/',
-        component: () => (<MediumIcon fontSize="large" style={{ color: "white" }} />)
-    },
-    {
-        name: 'Twitter',
-        link: 'https://twitter.com/suhaa93',
-        component: () => (<TwitterIcon fontSize="large" style={{ color: "white" }} />)
-    },
-    {
-        name: 'Instagram',
-        link: 'https://www.instagram.com/?hl=tr',
-        component: () => (<InstagramIcon fontSize="large" style={{ color: "white" }} />)
-    },
-    {
-        name: 'Facebook',
-        link: 'https://www.facebook.com/suha.isik',
-        component: () => (<FacebookIcon fontSize="large" style={{ color: "white" }} />)
-    }
-]
-
 function Welcome(props) {
     const classes = useStyles();
     return (
@@ -101,7 +69,7 @@ function Welcome(props) {
                     </Grid>
                     <Grid item sm={12} xs={12} md={6}>
                         <Box height={100} borderColor="primary">
-                            <SocialMediaIcons />
+                            <SocialMediaIconsComponent />
                         </Box>
                         <Box>
                             <Typography variant="h4" color="textPrimary">
@@ -134,27 +102,4 @@ function Welcome(props) {
         </Box >
     )
 }
-
-function SocialMediaIconComponent(props) {
-    return (
-        <Grid item>
-            <Link href={props.item.link}>
-                <Box bgcolor={theme.palette.primary.main} padding="10px" borderRadius="50%" >
-                    {props.item.component()}
-                </Box>
-            </Link>
-        </Grid>
-    )
-}
-
-function SocialMediaIcons() {
-    return (
-        <Grid container justify="center" alignItems="center" spacing={2} alignContent="center">
-            {socialMediaArray.map(item => {
-                return (<SocialMediaIconComponent item={item} key={item.name} />)
-            })}
-        </Grid>
-    );
-}
-
 export default Welcome;

@@ -1,6 +1,7 @@
 import { Container, Grid } from "@material-ui/core";
 import HeaderAndSeperator from "../HeaderAndSeperator";
 import BlogCard from "./BlogCard";
+import SmallBlogCard from "./SmallBlogCard";
 
 const headerSkills = {
     h1: 'MY',
@@ -20,8 +21,9 @@ function HomeBlogContainer() {
                     <Grid item md={6} lg={4}>
                         <BlogCard />
                     </Grid>
-                    <Grid item md={6} lg={4}>
-                        <BlogCard />
+                    <Grid item md={12} lg={4}>
+                        <SmallBlogCard />
+                        <SmallBlogCard />
                     </Grid>
                 </Grid>
             </Container>
