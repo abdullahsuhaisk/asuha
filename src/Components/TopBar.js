@@ -7,6 +7,7 @@ import { Grid } from '@material-ui/core';
 import TopBarButton from './TopBarButton'
 import MyLogo from './MyLogo'
 import { Link } from 'react-router-dom';
+import { routes } from '../Utils/Consts';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -23,6 +24,17 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+const TopBarLinkButton = ({ item, key }) => {
+  console.log(item.name)
+  return (
+    <Link to={`${item.path || item.name}`} key={key}>
+      {
+        item.name === 'Features' ? <TopBarButton name={item.name} variant="contained" color="primary" height={"100px"} /> : <TopBarButton name={item.name} />
+      }
+    </Link>
+  )
+}
+
 export default function TopBar() {
   const classes = useStyles();
   return (
@@ -36,14 +48,13 @@ export default function TopBar() {
               </Grid>
               <Grid item>
                 <Grid container>
-                  <Link to="/Resume">
-                    <TopBarButton name={"Resume"} />
-                  </Link>
-                  <TopBarButton name={"Home"} />
-                  <TopBarButton name={"Blogs"} />
-                  <TopBarButton name={"Projects"} />
-                  <TopBarButton name={"Contact"} />
-                  <TopBarButton name={"Features"} variant="contained" color="primary" height={"100px"}/>
+                  {
+                    routes.map((item, key) => {
+                      return (
+                        <TopBarLinkButton item={item} key={key} />
+                      )
+                    })
+                  }
                 </Grid>
               </Grid>
             </Grid>

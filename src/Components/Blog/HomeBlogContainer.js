@@ -15,15 +15,25 @@ function HomeBlogContainer() {
             <HeaderAndSeperator header={headerSkills} />
             <Container maxWidth="md">
                 <Grid container>
-                    <Grid item md={6} lg={4}>
+                    <Grid item md={6} lg={6}>
                         <BlogCard />
                     </Grid>
-                    <Grid item md={6} lg={4}>
+                    <Grid item md={6} lg={6}>
                         <BlogCard />
                     </Grid>
-                    <Grid item md={12} lg={4}>
-                        <SmallBlogCard />
-                        <SmallBlogCard />
+                    <Grid container item md={12} lg={12}>
+                        <Grid item lg={6} md={6} sm={12}>
+                            <SmallBlogCard />
+                        </Grid>
+                        <Grid item lg={6} md={6} sm={12}>
+                            <SmallBlogCard />
+                        </Grid>
+                        <Grid item lg={6} md={6} sm={12}>
+                            <SmallBlogCard />
+                        </Grid>
+                        <Grid item lg={6} md={6} sm={12}>
+                            <SmallBlogCard />
+                        </Grid>
                     </Grid>
                 </Grid>
             </Container>

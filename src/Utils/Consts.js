@@ -5,6 +5,14 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import MediumIcon from '@material-ui/icons/MenuBook';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
+import Home from "../Page/Home";
+import About from "../Page/About";
+import Blogs from '../Page/Blogs';
+import Features from '../Page/Features';
+import Projects from '../Page/Projects';
+import Contact from '../Page/Contact';
+
+
 export const socialMediaArray = [
     {
         name: 'Linkedin',
@@ -36,4 +44,33 @@ export const socialMediaArray = [
         link: 'https://github.com/abdullahsuhaisk',
         component: (fontsize, color) => (<GitHubIcon fontSize={fontsize || "medium"} style={{ color: color || "white" }} />)
     }
-]
+];
+
+export const routes = [
+    {
+      name: 'Home',
+      path: '/',
+      component: () => (<Home />)
+    },
+    {
+      name: 'About',
+      path: '/About',
+      component: () => (<About />)
+    },
+    {
+      name: 'Blogs',
+      component: () => (<Blogs />)
+    },
+    {
+      name: 'Projects',
+      component: () => (<Projects />)
+    },
+    {
+      name: 'Contact',
+      component: () => (<Contact />)
+    },
+    {
+      name: 'Features',
+      component: () => (<Features />)
+    }
+  ]

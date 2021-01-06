@@ -1,12 +1,12 @@
 import { Box, Container } from "@material-ui/core";
 import Banner from "../Components/Banner";
 
-function About() {
-    return <>
-        <Banner name="About" />
+function Contact() {
+    return (<Box>
+        <Banner name="Contact" />
         <Container maxWidth="md">
-
+            Contact Page
         </Container>
-    </>;
+    </Box>)
 }
-export default About;
+export default Contact;
