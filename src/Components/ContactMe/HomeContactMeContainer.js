@@ -7,6 +7,7 @@ import MyInput from "../MyInput";
 import TopBarButton from "../TopBarButton";
 import TelegramIcon from '@material-ui/icons/Telegram';
 import theme from '../../Utils/theme'
+import { Link } from "react-router-dom";
 
 const headerContact = {
     h1: 'CONTACT',
@@ -21,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     button: {
-        color: "primary"
+        color: "primary",
+        marginLeft: 7
     }
 }));
 
@@ -43,7 +45,7 @@ function HomeContactMeContainer() {
         <Container maxWidth="md">
             <HeaderAndSeperator header={headerContact} />
             <Grid container style={{ marginTop: 15 }}>
-                <Grid container item md={6} lg={8} sm={12} xs={12}>
+                <Grid container item md={6} lg={8} sm={6} xs={12}>
                     <Grid item md={12} lg={6} sm={6} xs={12}>
                         <FormGroup className={classes.root}>
                             <MyInput id={"Name"} handleOnChange={e => handleOnChange(e)} />
@@ -67,7 +69,7 @@ function HomeContactMeContainer() {
                         </Box>
                     </Grid>
                 </Grid>
-                <Grid item md={6} lg={4} sm={12} xs={12}>
+                <Grid item md={6} lg={4} sm={6} xs={12}>
                     <img src={contactImage} style={{ width: "100%" }}></img>
                 </Grid>
                 <Grid item md={12} lg={12} sm={12}>
@@ -76,7 +78,9 @@ function HomeContactMeContainer() {
                     <Button variant="contained" className={classes.button} onClick={() => { console.log("Get in touch Clicked") }}>
                         <TelegramIcon style={{ marginRight: 10 }} color="primary" fontSize="large" />
                         <Box color={theme.palette.primary.main}>
-                            Get In Touch
+                            <Link to ="/Contact" style={{textDecoration:"none",color:"rgb(216, 83, 43)"}}>
+                                Get In Touch
+                            </Link>
                         </Box>
                     </Button>
 

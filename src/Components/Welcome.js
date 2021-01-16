@@ -79,20 +79,20 @@ function Welcome(props) {
                             </Typography>
                             <Typography variant="h3" color="textPrimary">
                                 <Box fontWeight="700">
-                                    In my own hand-craftedfrontend development world.
+                                    In my own hand-crafted development world.
                                 </Box>
                             </Typography>
                             <Typography color="textPrimary">
-                                Helping design your business and personal website build with your demand by html and wordpress. Click the demo work button, you can see my previous project.
-                        </Typography>
+                            On this web site, You can find my work, essays, and ideas. I'll try to keep updated. You can find my experimental works on FEATURE Button. Also, my ex projects, work, blogs these things inside this web site.I believe it is especially good for a JS developer. These days I am going to ahead Swift.It's a new adventure for me
+                            </Typography>
                         </Box>
                         <Box width={"100%"} marginTop={5}>
                             <Grid container justify="flex-end" alignItems="center" spacing={2}>
                                 <Grid item>
-                                    <TopBarButton name={"Feature 1"} variant="contained" color="primary" onClick={() => console.log("Feature 1")} />
+                                    <TopBarButton name={"Conferance"} variant="contained" color="primary" onClick={() => console.log("Feature 1")} />
                                 </Grid>
                                 <Grid item>
-                                    <TopBarButton name={"Feature 2"} variant="contained" color="primary" onClick={() => console.log("Feature 2")} />
+                                    <TopBarButton name={"Code"} variant="contained" color="primary" onClick={() => console.log("Feature 2")} />
                                 </Grid>
                             </Grid>
                         </Box>

@@ -34,7 +34,7 @@ const educationArray = [
         date: '2012 - 2018',
         type: 'Edu'
     }
-]
+].reverse()
 const experienceArray = [
     {
         id: 0,

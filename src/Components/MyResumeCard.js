@@ -4,7 +4,6 @@ import ExplicitIcon from '@material-ui/icons/Explicit';
 import EventIcon from '@material-ui/icons/Event';
 import CastForEducationIcon from '@material-ui/icons/CastForEducation';
 import theme, { themeCONSTANT } from '../Utils/theme';
-import { useState } from 'react';
 
 const useStyles = makeStyles((theme) => ({
     resumeCard: {

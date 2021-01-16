@@ -1,6 +1,7 @@
 import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import aboutImage from '../../Assets/about.png';
 import TopBarButton from "../TopBarButton";
+import { useHistory } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -12,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 function MyResumeAboutMe() {
     const classes = useStyles();
-
+    const history = useHistory();
     return (
         <Container maxWidth="md">
             <Box component="section" className={classes.root}>
@@ -25,8 +26,7 @@ function MyResumeAboutMe() {
                         </Typography>
                         <Typography variant="body1" color="textSecondary">
                             <Box fontWeight={600} paddingRight={"50px"}>
-                                I’m with broad technical skill-set, very strong attention to detail, and 3 years of experience in front-end web development. Able to multitask and juggle multiple pressing projects simultaneously. On top of the latest trends and technologies. Ability to improvise, troubleshoot, take ownership, and most importantly learn new skills on the job.
-                        </Box>
+                            I'm a computer engineer. My professional career starts in 2018. Before this, I very interesting in software so decided to go to university in a computer engineering department. I have interested in different software. But my professional career started with React Native. I developed a cross-platform mobile app for a car accessory retailer company. Then I have continued with React as a Frontend developer. Now I developing a communication application for enterprise companies. For now my tech stack  AngularJs, Cordova, and NodeJs. And I am learning Swift because I want to move to the mobile side. I am bored with Functional Programming.                            </Box>
                         </Typography>
                     </Grid>
                     <Grid item sm={5}>
@@ -57,7 +57,8 @@ function MyResumeAboutMe() {
                         height={"200px"} 
                         fontWeight={700} 
                         fontType="subtitle2" 
-                        onClick={() => { console.log("Contact Me") }} />
+                        titleColor="white"
+                        onClick={() => { history.push('/Contact') }} />
                         </Box>
                  
                     </Grid>

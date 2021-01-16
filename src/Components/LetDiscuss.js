@@ -1,6 +1,7 @@
 import { Box, Container, Typography, Button } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import TelegramIcon from '@material-ui/icons/Telegram';
+import { Link } from "react-router-dom";
 
 import discussImage from '../Assets/discuss-bg.png'
 import theme from "../Utils/theme";
@@ -45,7 +46,9 @@ function LetDiscuss() {
                     <Button variant="contained" className={classes.button} onClick={() => {console.log("Get in touch Clicked")}}>
                         <TelegramIcon style={{ marginRight:10}} color= "primary" fontSize="large"/>
                         <Box color={theme.palette.primary.main}>
-                        Get In Touch
+                            <Link to="/Contact" style={{textDecoration:"none", color:"rgb(216, 83, 43)"}}>
+                                Get In Touch
+                            </Link>
                         </Box>
                     </Button>
                 </Box>

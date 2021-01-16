@@ -17,7 +17,7 @@ function MyResumeSelectedSection({array}) {
     const [hoverResumeCard, setHoverResumeCard] = useState(null);
     return (
         <Box>
-            <Grid container spacing={6} className={classes.root}>
+            <Grid container spacing={1} className={classes.root}>
                 {
                     array.map((item) => (
                         <div onMouseEnter={() => setHoverResumeCard(item.id)} onMouseLeave={() => setHoverResumeCard(null)} key={item.id} >
